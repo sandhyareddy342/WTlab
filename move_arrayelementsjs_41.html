@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>041_Move_Array_Elements</title>
+    <script>
+        function move(arr, firstIndex, secondIndex) {
+            if (firstIndex < 0)
+                firstIndex += arr.length;
+            if (secondIndex < 0)
+                secondIndex += arr.length;
+            arr.splice(secondIndex, 0, arr.splice(firstIndex, 1)[0]);
+            return arr;
+        }
+        arr = [10, 20, 30, 40, 50];
+        document.writeln("Initial array:"+arr);
+        document.writeln("<br>");
+        document.writeln("New Array : " + move(arr, 0, 2));
+    </script>
+</head>
+
+<body>
+    
+    <!-- Sandhya 1602-16-737-041 -->
+</body>
+</html>
